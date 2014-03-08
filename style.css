@@ -1,0 +1,301 @@
+body{
+	font-family:Arial Unicode MS;
+}
+a{
+	color:blue;
+}
+
+.btn30{
+	text-align:center;
+	font-size:11pt; 
+	line-height:29px; 
+	vertical-align:top; 
+	width:85px; 
+	height:29px; 
+	cursor:pointer; 
+	background-image:url(./images/btn.png); 
+	color:while
+}
+.btn30_over{
+	text-align:center;
+	font-size:11pt; 
+	line-height:29px; 
+	vertical-align:top; 
+	width:85px; 
+	height:29px; 
+	cursor:pointer; 
+	background-image:url(./images/btn_over.png); 
+	color:while
+}
+.btn{
+	/*width:150px;*/
+	height:32px; 
+	font-size:12pt; 
+	font-family:Arial Unicode MS;
+}
+
+.tab_marguee{
+	background-image:url(./images/tab_marquee.png);
+	/*background:white;  */
+	text-align:center; 
+	height:35px; 
+	line-height:35px; 
+}
+
+
+.tab{
+	background-image:url(./images/tab.png);
+	/*background:white;  */
+	text-align:center; 
+	height:35px; 
+	line-height:35px; 
+}
+
+.tab_over{
+	background-image:url(./images/tab_selected_red.png);
+	/*background:#5f5f5f*/;
+	text-align:center; 
+	height:35px; 
+	line-height:35px; 
+	color:white;
+
+}
+.tab_selected{
+	background-image:url(./images/tab_selected.png);
+	/*background:#5f5f5f*/;
+	text-align:center; 
+	height:35px; 
+	line-height:35px; 
+	color:white;
+
+}
+
+.menu1{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:black;
+	background:url('./images/menu1.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu1_over{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:red;			
+	background:url('./images/menu1_over.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+}
+.menu1_selected{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:white;	
+	background:url('./images/menu1_selected.gif');
+	background-repeat:no-repeat; 
+	background-position:center center		
+}
+.menu2{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:black;
+	background:url('./images/menu2.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu2_over{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:red;			
+	background:url('./images/menu2_over.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+}
+.menu2_selected{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:white;	
+	background:url('./images/menu2_selected.gif');
+	background-repeat:no-repeat; 
+	background-position:center center		
+}
+.menu3{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:black;
+	background:url('./images/menu3.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu3_over{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:red;			
+	background:url('./images/menu3_over.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+}
+.menu3_selected{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:white;	
+	background:url('./images/menu3_selected.gif');
+	background-repeat:no-repeat; 
+	background-position:center center		
+}
+.menu4{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:black;
+	background:url('./images/menu4.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu4_over{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:red;			
+	background:url('./images/menu4_over.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+}
+.menu4_selected{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:white;	
+	background:url('./images/menu4_selected.gif');
+	background-repeat:no-repeat; 
+	background-position:center center		
+}
+.menu5{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:black;
+	background:url('./images/menu5.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu51{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	background:url('./images/up-11.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu52{
+	
+	line-height:27px;
+	height:29px;
+	background:url('./images/up-22.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+	
+}
+.menu5_over{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:red;			
+	background:url('./images/menu5_over.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+}
+.menu5_selected{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:white;	
+	background:url('./images/menu5_selected.gif');
+	background-repeat:no-repeat; 
+	background-position:center center		
+}
+.menu6{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:black;
+	background:url('./images/menu6.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+	
+}
+.menu6_over{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:red;			
+	background:url('./images/menu6_over.gif');
+	background-repeat:no-repeat; 
+	background-position:center center
+}
+.menu6_selected{
+	text-align:center;
+	line-height:27px;
+	height:27px;
+	cursor:pointer;
+	color:white;	
+	background:url('./images/menu6_selected.gif');
+	background-repeat:no-repeat; 
+	background-position:center center		
+}
+.userinfolink{
+	color:#666666;
+	text-decoration:none;
+	font-size:15px;
+}
+.userinfolink:hover{
+	color:#3366ff;
+	text-decoration:underline;
+	font-size:15px;
+}
+.admin_top_link{
+	color:#003300;
+	text-decoration:none;
+	font-weight:bold;
+	font-size:14px;
+	font-family:Arial Unicode MS, 微軟正黑體;
+}
+.admin_top_link:hover{
+	color:#ff0000;
+	text-decoration:underline;
+	font-weight:bold;
+	font-size:14px;
+	font-family:Arial Unicode MS, 微軟正黑體;
+}

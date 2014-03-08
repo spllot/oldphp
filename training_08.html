@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>InTimeGo即購網_會員申請程序&amp;會員後台簡介</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ 元素/標籤選取器 ~~ */
+ul, ol, dl { /* 由於瀏覽器之間的差異，最佳作法是在清單中使用零寬度的欄位間隔及邊界。為了保持一致，您可以在這裡指定所要的量，或在清單包含的清單項目 (LI、DT、DD) 上指定所要的量。請記住，除非您寫入較為特定的選取器，否則在此執行的作業將重疊顯示到 .nav 清單。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 移除上方邊界可以解決邊界可能從其包含的 Div 逸出的問題。剩餘的下方邊界可以保持 Div 不與接在後面的元素接觸。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 將欄位間隔加入至 Div 內元素的兩側 (而不是 Div 本身)，即可不需執行任何方塊模型的計算作業。具有側邊欄位間隔的巢狀 Div 也可當做替代方法。 */
+}
+.text1 {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bolder;
+	color: #900;
+	padding-top: 30px;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text {
+	font-size: 18px;
+	color: #900;
+	font-weight: normal;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text0 {
+	font-size: 15px;
+	color: #552B00;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text2 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #900;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text3 {
+	font-size: 16px;
+	color: #630;
+	font-weight: bold;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin: 5px;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text5 {
+	font-size: 14px;
+	color: #630;
+	padding-left: 22px;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text4 {
+	font-size: 12px;
+	color: #333;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+a img { /* 這個選取器會移除某些瀏覽器在影像由連結所圍繞時，影像周圍所顯示的預設藍色邊框 */
+	border: none;
+}
+
+/* ~~ 網站連結的樣式設定必須保持此順序，包括建立滑過 (Hover) 效果的選取器群組在內。~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* 除非您要設定非常獨特的連結樣式，否則最好提供底線，以便快速看出 */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 這個選取器群組可以讓使用鍵盤導覽的使用者，也和使用滑鼠的使用者一樣擁有相同的滑過體驗。 */
+	text-decoration: none;
+}
+
+/* ~~這個固定寬度的容器環繞著其他 Div~~ */
+.container {
+	width: 960px;
+	background: #FFF;
+	margin: 0 auto; /* 兩側的自動值與寬度結合後，版面便會置中對齊 */
+}
+
+/* ~~ 頁首沒有指定的寬度，而會橫跨版面的整個寬度。頁首包含影像預留位置，必須由您自己的連結商標加以取代 ~~ */
+.header {
+	background: #ADB96E;
+}
+
+/* ~~ 這是版面的欄位。~~ 
+
+1) 欄位間隔只會置於 Div 的頂端或底部。這些 Div 內的元素在兩側會有欄位間隔，可讓您不需進行「方塊模型計算」。請記住，如果對 Div 本身加入任何側邊的欄位間隔或邊框，在計算「總」寬度時，就會將這些加入您定義的寬度。您也可以選擇移除 Div 中元素的欄位間隔，然後在其中放置沒有寬度的第二個 Div，並依設計所需放置欄位間隔。
+
+2) 尚未為這些欄位提供邊界，因為它們全都是浮動的。如果必須加入邊界，請避免將其放在浮動方向的一側 (例如將右邊界放在設定為向右浮動的 Div 上)。在許多時候，您都可以改用欄位間隔。對於必須違反此規則的 Div，您應該在 Div 的規則中加入 "display:inline" 宣告，以防止某些版本的 Internet Explorer 將邊界加倍。
+
+3) 因為可在文件中多次使用類別 (也可對單一的元素套用多個類別)，所以已為欄位指定類別名稱，而非 ID。例如，您可在必要時將兩個側邊列 Div 堆疊起來。如有需要，也可以將這些名稱輕鬆地變更為 ID (只要您在每份文件中只使用一次)。
+
+4) 如果想要將導覽放在左方而非右方，只要將這些欄設定為往反方向浮動 (全部往左，而非全部往右)，它們就會以相反順序呈現。您不需要在 HTML 原始碼中移動 Div。
+
+*/
+.sidebar1 {
+	float: right;
+	width: 180px;
+	background: #EADCAE;
+	padding-bottom: 10px;
+}
+.content {
+
+	padding: 10px 0;
+	width: 780px;
+	float: right;
+}
+
+/* ~~ 這個群組選取器會在 .content 區域空間中提供清單 ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* 這個欄位間隔反映出上方標題和段落規則中的右方間隔。當欄位間隔位於下方時，便可將清單中的其他元素間隔開來；當位於左方時，則可藉此建立縮排。這些動作均可依需要進行調整。 */
+}
+
+/* ~~ 導覽清單樣式 (如果選擇使用 Spry 之類的預製飛出選單，則可移除) ~~ */
+ul.nav {
+	list-style: none; /* 這會移除清單標記 */
+	border-top: 1px solid #666; /* 這會建立連結的上方邊框，其他則都會使用下方邊框放置在 LI 上 */
+	margin-bottom: 15px; /* 這會在下方的內容上建立導覽間的間距 */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* 這會建立按鈕分隔 */
+}
+ul.nav a, ul.nav a:visited { /* 將這些選取器放入群組，即可確保您的連結即使在受到點擊後仍保有按鈕外觀 */
+	padding: 5px 5px 5px 15px;
+	display: block; /* 這會為連結提供區塊屬性，使連結能填滿包含它的整個 LI，讓整個區域都能回應滑鼠點按動作。 */
+	width: 160px;  /*這個寬度使整個按鈕都可用於 IE6 的點按動作。如果不需要支援 IE6，就可將其移除。請從側邊列容器的寬度減去此連結的間距來計算適當的寬度。 */
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* 這會同時變更滑鼠及鍵盤導覽器的背景及文字顏色 */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ 頁尾 ~~ */
+.footer {
+	padding: 10px 0;
+	background: #CCC49F;
+	position: relative;/* 這會為 IE6 提供 hasLayout 以進行適當的清除動作 */
+	clear: both; /* 這個 clear 屬性可以強制 .container 辨識欄結束於何處以及包含欄的位置 */
+}
+
+/* ~~ 其他 float/clear 類別 ~~ */
+.fltrt {  /* 這個類別可用來讓元素在頁面中浮動，浮動的元素必須位於頁面上相鄰的元素之前。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 這個類別可用來讓元素在頁面左方浮動，浮動的元素必須位於頁面上相鄰的元素之前。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 這個類別可放置在 <br /> 或空白的 Div 上，當做接在 #container 內最後一個浮動 Div 後方的最後一個元素 (如果從 #container 移除或取出 #footer) */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+body,td,th {
+	color: #000;
+}
+.test00 {
+	font-size: 16px;
+	color: #F60;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text01 {
+	font-size: 15px;
+	color: #00F;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+.text011 {font-size: 15px;
+	color: #F60;
+	font-family: "微軟正黑體", "新細明體", "標楷體";
+}
+-->
+</style>
+<meta name="Keywords" content="購物網, 購物, 網路購物, 線上購物, 團購, 廉售, 即購網" /><meta name="description" content="InTimeGo即購商品資訊網 (簡稱 InTimeGo即購網) 是全民性的行動商務平台，係針對一般傳統商店、行動商店 (包含攤販、餐車、便利商店車...等)以及個人商務，進行動態商品或活動搜尋以及商品販售的網路平台." />
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><!-- end .header --><a href="http://www.intimego.com"><img src="http://g.udn.com.tw/upfiles/B_HU/huangy001/PSN_PHOTO/584/f_10430584_1.png" width="368" height="95" /></a></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="http://www.deepblue50.com.tw/"><img src="http://house.netete.com/rrad/deepblue50.jpg" width="150" height="59" /></a></li>
+      <li><a href="http://house.netete.com/bnb/home1.htm"><img src="http://house.netete.com/rrad/travelerinn.jpg" width="150" height="59" /></a></li>
+      <li><a href="http://blue-sea.com.tw/"><img src="http://house.netete.com/rrad/blue-sea.jpg" width="151" height="55" /></a></li>
+      <li><a href="http://www.redcat.com.tw/"><img src="http://house.netete.com/rrad/redcat.jpg" width="151" height="56" /></a></li>
+    </ul>
+    <p><span class="text2">InTimeGo即時服務</span></p>
+    <p class="text4">InTimeGo即時服務資訊網 (或稱 InTimeGo即購網)   是全民性的行動商務平台，係針對一般傳統商店、行動商店   (攤販、行動販售車、補貨物流車...等)、運輸&amp;共乘、即時人力、即時活動以及個人商務，進行服務搜尋以及商品販售的網路平台，對普羅大眾而言，這是一個能拉近供需距離與創造服務價值的網站，可以為買賣雙方創造更為便利與快速的商業關係。</p>
+<p class="text4">另一方面也藉由推展「全民皆商」與「全民行銷」的構想，冀望創造更多元的商務與獲利的機會，平台運作把販售商品的部分盈餘分享給全民，只要能為平台做出貢獻的全民都能受到回饋；平台的理想願景是，希望未來實現「企業員工全民化」目標，本站實施方式以「傳播式商品」作為敲門磚，期能引導各行各業以相關模式跟進，務使全民不再有失業的困擾!</p>
+    <p class="text2"><strong>本站將經由以下兩點,   達到利潤分享於買賣雙方:</strong></p>
+    <p class="text4">(1).   提供低門檻費用之團購商品販售服務，讓賣家能保有販售商品的利潤，買家能享有高品質的消費服務。另提供賣家建置非金流商品頁面 (新品、即期品與中古貨，皆可設定為非金流商品)，不需抽取任何販售服務費用，讓賣家享有0成本之商品行銷販售機會。</p>
+    <p class="text4">(2).   網站會員可以享有部落格行銷與商品傳播獲利之機會，本站將商品行銷經費回饋給全民，凡對站內團購商品有介紹、購買或資訊傳播行為，皆可經由紅利回饋方式獲得儲值金，因而享有0元購買商品以及賺取現金之機會。</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+    <p class="text4">&nbsp;</p>
+  </div>
+  <div class="content">
+    <h2 class="text1"><span id="maintopic"><span id="maintopic2"><span id="maintopic3"><span id="maintopic4">會員申請程序</span></span></span></span> &amp; 會員後台簡介</h2>
+    <p class="text"><span id="mainbody"><span id="mainbody7"><strong><span id="mainbody14"><strong>InTimeGo一般會員之申請程序</strong></span></strong></span></span></p>
+    <p class="text0"><span><span id="mainbody15">連結本站網址http://ww.intimego.com (也可以google搜尋&quot;InTimeGo即購網&rdquo;或&quot;即購網&rdquo;)，完成以下兩個步驟，便可成為即購網一般會員:</span></span><span><span><br />
+    <strong>步驟(1).</strong> 在首頁上方按[註冊]鍵，進入會員註冊頁面填寫個人資料</span></span>。<span>會員註冊<span id="mainbody2">填寫個人資料之範例，如圖一所示 (圖一範例純為虛擬資料， 如恰巧相同，敬請包涵 ):</span></span>    </p>
+    <table width="90%" border="0" align="center">
+      <tr>
+        <td align="center" class="text3"><strong>圖一. 會員註冊<span id="mainbody13">填寫資料範例</span></strong></td>
+      </tr>
+      <tr>
+        <td align="center"><span class="text0"><img src="http://g.udn.com.tw/upfiles/B_EM/emilyhal/PSN_PHOTO/995/f_10008995_1.JPG" alt="" width="670" height="547" border="1" align="middle" /></span></td>
+      </tr>
+    </table>
+    <p class="text0">&nbsp;</p>
+    <p class="text0"><span><span id="mainbody3"><strong>步驟(2).</strong> 當您送出&quot;會員註冊&rdquo;資料後，請至信箱收取會員確認信，點選此確認信連結網址後   (如圖二所示)，您的帳號始得生效。若是您遲遲未收到會員確認信，您可以來信到service@intimego.com要求管理員啟用帳號，當管理員啟用您的帳號後，將會回信通知您。</span></span>若使用者想進一步了解網站使用之問題，可以點選郵件內[網站使用導引]之連結說明。</p>
+    <table width="90%" border="0" align="center">
+      <tr>
+        <td align="center" class="text3"><strong>圖二. 會員註冊<span id="mainbody16">確認信範例</span></strong></td>
+      </tr>
+      <tr>
+        <td align="center"><p class="text0"><img src="http://g.udn.com.tw/upfiles/B_EM/emilyhal/PSN_PHOTO/096/f_10009096_1.JPG" width="667" height="480" border="1" /></p></td>
+      </tr>
+    </table>
+    <p class="text0">&nbsp;</p>
+    <p class="text"><span id="mainbody4"><strong><strong>InTimeGo</strong>金流商品會員之申請程序</strong></span></p>
+    <p class="text0">本站一般會員可以直接建置「非金流商品」，「非金流商品」上架販售與成交雖不會被抽取任何費用，但其帳款需商家本身向商品買家收取，無法得到本站收款服務，唯有成為金流商品會員方可在本站建置「金流商品」，得到本站刷卡及虛擬帳號收款服務。當您申請成為即購網一般會員後，再完成以下兩個步驟，便可成為金流商品會員:<br />
+    <strong>步驟(1).</strong> 在首頁上方按[登入]鍵登入後 (會員登入完成後，會在前台左上方出現會員暱稱/等級/儲值金額資訊，如下圖三所示) ，依據下圖紅框位置再按下[用戶中心]鍵，則進入會員後台。</p>
+    <table width="90%" border="0" align="center">
+      <tr>
+        <td align="center" class="text3"><strong>圖三. 會員登入後，前台顯示<span id="mainbody17">範例</span></strong></td>
+      </tr>
+      <tr>
+        <td align="center"><p class="text0"><img src="http://g.udn.com.tw/upfiles/B_EM/emilyhal/PSN_PHOTO/234/f_10009234_1.jpg" width="664" height="132" border="1" /></p></td>
+      </tr>
+    </table>
+    <p class="text0">&nbsp;</p>
+    <p class="text0"><span id="mainbody6"><span id="mainbody5"><strong>步驟(2).</strong> 在會員後台[業者資訊中心]&gt;&gt;[我的金流資訊]頁面，填寫發票與匯款相關資料後，按下[申請成為金流商品賣家] 將資料送出後即成為金流賣家會員，頁面參考如下圖四所示 (圖四範例純為虛擬資料， 如恰巧相同，敬請包涵 )。</span></span>若商家為個體戶非公司戶，圖四可以不用填寫統一編號，填寫發票與匯款相關資料之目的，在於當商家商品需求網站金流收款服務時，網站所收得之款項可以匯款給商家，而網站所扣取之服務費用，也得以開發票予商家。</p>
+    <table width="90%" border="0" align="center">
+      <tr>
+        <td align="center" class="text3"><strong>圖四. [我的金流資訊]頁面<span id="mainbody19">範例</span></strong></td>
+      </tr>
+      <tr>
+        <td align="center"><p class="text0"><img src="http://g.udn.com.tw/upfiles/B_EM/emilyhal/PSN_PHOTO/244/f_10009244_1.JPG" width="637" height="551" border="1" /></p></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p><span class="text"><span><strong><span><strong><strong>InTimeGo</strong>會員後台功能簡要介紹:</strong></span></strong></span></span></p>
+<p><span class="text0"><span id="mainbody9"><span id="mainbody18"><strong class="test00">[我的帳戶]表列項目 (陳列於一般會員後台):</strong><br />
+    <strong>• 帳戶總攬:</strong> </span></span></span><br />
+    <span class="text0"><span><span>可由帳戶總攬得知登入訊息、會員等級、參與部落格行銷得分、參與傳播商品訊息、以及儲值金點數等資訊。</span></span></span><span class="text0"><span><span><br />
+    <strong>• 個人資料:</strong> </span></span></span><br />
+    <span class="text0"><span><span>顯示個人基本資料，其中，若變更手機號碼、真實姓名、收件地址時，系統會發送確認信，當點選確認信後，變更才得以生效。</span></span></span><span class="text0"><span><span><br />
+    <strong>• 申請與設定資訊:</strong> </span></span></span><br />
+    <span class="text0"><span><span>可以申請即購</span></span></span><span class="text0"><span><span>網好康資訊報以及電子報，在此也可以參與部落格行銷文章徵求，進一步獲得儲值金，另外此項目也提供前台廣告購買之功能。</span></span></span><span class="text0"><span><span><br />
+    <strong>• 傳播點及紅利明細:</strong> </span></span></span><br />
+    <span class="text0"><span><span>當會員對</span></span></span><span class="text0"><span><span>站內之傳播式團購商品有介紹、購買或傳播行為, 即可獲得該商品所得之利潤做為介紹或傳播該商品之回饋，會員所得之傳播點及紅利明細，可以在此項目中呈現。</span></span></span><span class="text0"><span><span><br />
+    <strong>• 儲值金匯入匯出:</strong> </span></span></span><br />
+    <span class="text0"><span><span>呈現會員之儲值金使用明細，會員也可以在此項目購買儲值金或匯出儲值金。</span></span></span><span class="text0"><span><span><br />
+    <strong>• 站內訊息通知:</strong> </span></span></span><br />
+    <span class="text0"><span><span>由即購網管理者所發送給會員之訊息查詢，訊息分為「私人訊息」、「系統訊息」以及「公共訊息」。</span></span></span><span class="text0"><span><span><br />
+    <strong>• 我的問題諮詢:</strong> </span></span></span><br />
+    <span class="text0"><span><span>會員登入情況下，由前台[商家合作/客服中心]所詢問之問題，可以經由此項目得到管理者的回覆，若會員在未登入情況下，由前台[商家合作/客服中心]詢問問題，也可以經由電子郵件得到管理者的回覆。</span></span></span></p>
+<p class="text0"><strong class="test00">[我是買家]表列項目 (陳列於一般會員後台):</strong><br />
+    <strong>• 訂單交易查詢:</strong><br />
+    當會員購買金流商品，可以經由此項目查詢訂單狀況。<br />
+    <strong>• 我的收藏與追蹤:</strong><br />
+    當會員瀏覽商品或服務說明頁，對該商家商品感到興趣想要追蹤時，可以在該頁面按下加入收藏鍵 ; 會員所收藏的商品或服務，可以在此項目中瀏覽收藏記錄，隨時追蹤商家販售或服務位置以及預告事項。</p>
+<p class="text0"><span class="test00"><strong class="test00">[我是業者 (提案者)]表列項目 (陳列於一般會員後台):</strong></span><br />
+  <strong>• </strong><span id="mainbody12"><strong>業者資訊中心: </strong><br />
+  <strong class="text01">我的金流資訊:</strong> [我的金流資訊]頁面，填寫發票與匯款相關資料後，按下[申請成為金流商品賣家] 將資料送出後，即成為金流賣家會員，也可以在此變更發票開立資訊及匯款帳號。為網路安全性考量，若變更此項目資訊，系統會發送確認信，當點選確認信後，變更才得以生效。<br />
+  <strong class="text01">我的位置與狀態設定:</strong> 此為行動服務狀態設定項目，可以設定功能有「本地服務營業狀態設定」、「行動服務位置來源設定」以及「手動設定行動服務位置」。<br />
+  <strong class="text01">我的上架服務:</strong> 可以在此對「非金流」商品或服務 &quot;延長上架&rdquo;或 &quot;強制下架&rdquo;，如果要變更商品或服務搜尋所屬類別，也可以在此項目操作。<br />
+  <strong class="text01">本地服務&amp;商品設定:</strong> 可以於此項目設定[本地服務]前台列表優先權，因為前台服務列表僅能顯示商家一個商品或服務，優先權之用意在搜尋服務類別時，決策哪一個商品或服務須顯示於前台。此選項另一功能為[在地優惠簡訊]發送設定，此功能可以使商家的非金流商品，運用簡訊行銷的方式推廣商品或服務。<br />
+  <strong class="text01">預告項目與商家介紹:</strong> 此項目編輯商家自我介紹與服務預告事項，&ldquo;商家介紹頁面&rdquo;內容經由前台表列之[商家其他服務]頁之&quot;商家名稱&rdquo;點選連結。<br />
+  <strong class="text01">商品&amp;服務詢問回覆: </strong>瀏覽者可在前台商品或服務說明頁下方[詢問商家問題]鍵，對商家提出商品問題，而商家可以在此項目回覆瀏覽者的詢問。<br />
+  <strong>• 服務提案&amp;更新:</strong> </span><br />
+  <span>商家可在此項目提案販售之新商品或新服務，提案送出後三天內管理者將審核回覆。</span><br />
+  <br />
+  <span class="test00"><strong class="test00">[我是業者 (提案者)]表列項目 (陳列於金流商家會員後台):</strong></span><br />
+  當申請成為金流商品賣家後，下圖[我是業者(提案者)]表列會出現幾個金流服務專屬功能鍵，茲將功能選項簡單說明如下:<span id="mainbody10"><span id="mainbody11"><br />
+    <strong>• 商品交易紀錄:</strong></span></span><br />
+    <span><span>可以查看商家訂單狀態，若有訂單疑問也可在此項目詢問管理者。<br />
+    <strong>• 商家處理資訊:</strong> </span></span><br />
+    <span><span>商家在此查詢商品販售狀況，並處理本地/宅配商品訂單之狀態，此項目也處理發票開立之狀態。<br />
+    <strong>• 匯款帳務查詢:</strong> </span></span><br />
+    <span><span>商家可在此項目查詢帳戶匯款與銷售情況。</span></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="90%" border="0" align="center">
+  <tr>
+    <td align="center" class="text3"><span class="text">InTimeGo即時服務: <a href="http://www.intimego.com">www.intimego.com </a></span></td>
+  </tr>
+  <tr>
+    <td height="174" align="center"><p class="text011"><img src="http://g.udn.com.tw/upfiles/B_EM/emilyhal/PSN_PHOTO/943/f_10017943_1.GIF" alt="" width="334" height="128" border="0" align="middle" usemap="#Map" /></p></td>
+  </tr>
+</table>
+<map name="Map" id="Map">
+  <area shape="rect" coords="219,11,318,100" href="https://play.google.com/store/apps/details?id=com.intimego" target="_blank" />
+  <area shape="rect" coords="18,6,117,95" href="http://www.intimego.com" target="_blank" />
+</map>
+<p class="text"><!-- end .content --></p>
+  </div>
+  <div class="footer">
+    <p class="text3">&nbsp;</p>
+    <p class="text3"><a href="index.html">吉達資訊科技股份有限公司 </a></p>
+<p class="text5"> service@intimego.com ∣ 客服專線: (03)590-4710 (09:00~18:00)</p>
+<p class="text5"> <!-- end .footer --></p>
+  </div>
+  <!-- end .container --></div>
+</body>
+</html>
