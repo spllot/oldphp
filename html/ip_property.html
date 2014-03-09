@@ -1,0 +1,38 @@
+    <table cellpadding="0" cellspacing="0" border="0">
+        <form name="iForm" action="ip_save.php" method="post">
+        <input type="hidden" name="keyword">
+		<input type="hidden" name="pageno">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td class="html_label_required">IP：</td>
+                        <td align="left"><textarea name="ip" style="width:300px; height:100px"></textarea></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><hr>
+                <table width="100%">
+                    <tr>
+                        <td align="center" width="50%"><input type="button" value="確定" onClick="Save();"></td>
+                        <td align="center" width="50%"><input type="reset" value="取消" onclick="iForm.action='ip.php'; iForm.submit();"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </form>
+    </table>
+<script language="javascript">
+
+    function Save(){
+        if(!iForm.ip.value){
+            alert("請輸入IP!!");
+            iForm.ip.focus();
+        }
+        else{
+            iForm.submit();
+        }
+    }//Save
+</script>

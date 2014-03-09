@@ -1,0 +1,91 @@
+    <table cellpadding="0" cellspacing="0" border="0">
+        <form name="iForm" action="group_save.php" method="post">
+        <input type="hidden" name="no" value="">
+        <input type="hidden" name="userlist" value="">
+		<input type="hidden" name="pageno">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td class="html_label_required">群組名稱：</td>
+                        <td align="left"><input type="text" name="name" value="" style="width:250px"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">群組成員：</td>
+                        <td align="left">
+							<table>
+								<tr>
+									<td><select name="users" size="7" style="width:200px"></select></td>
+									<td style="width:45px; text-align:center">
+										<input type="button" value="加入" onClick="addUser();"><br><br><br>
+										<input type="button" value="移除" onClick="delUser();">
+									</td>
+								</tr>
+							</table>
+								
+						</td>
+                    </tr>
+                    <tr>
+                      <td class="html_label_required">排列順序：</td>
+                        <td align="left"><input type="text" name="sort" value="" style="width:50px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><hr>
+                <table width="100%">
+                    <tr>
+                        <td align="center" width="50%"><input type="button" value="確定" onClick="Save();"></td>
+                        <td align="center" width="50%"><input type="reset" value="取消" onclick="history.back();"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </form>
+    </table>
+<script language="javascript">
+	function addUser(){
+	    var Users = window.showModalDialog("group_user.php", "", "status:no");
+		if(Users){
+			for (var i=0;i<Users.length ; i++){
+				iForm.users.options.length++;
+				iForm.users.options[iForm.users.options.length - 1].text = Users[i].ID + "(" + Users[i].Name + ")";
+				iForm.users.options[iForm.users.options.length - 1].value = Users[i].ID;
+			}
+		}
+	}
+	function delUser(){
+		if(iForm.users.options.selectedIndex > -1){
+			for (var i=iForm.users.options.selectedIndex; i<iForm.users.options.length-1 ; i++){
+				iForm.users.options[i].text = iForm.users.options[i+1].text;
+				iForm.users.options[i].value = iForm.users.options[i+1].valu;
+			}
+			iForm.users.options.length--;
+		}
+		else{
+			alert("尚未選取!!");
+		}
+	}
+
+    function Save(){
+        if (!iForm.name.value){
+            alert("請輸入群組名稱!");
+            iForm.name.focus();
+        }
+		else if(!iForm.sort.value){
+			alert("請輸入排列順序!");
+			iForm.sort.focus();
+		}
+        else{
+			iForm.userlist.value = "";
+			for(var i=0; i<iForm.users.options.length; i++){
+				iForm.userlist.value += iForm.users.options[i].value + ",";
+			}
+			if(iForm.userlist.value.length > 0){
+				iForm.userlist.value = iForm.userlist.value.substring(0, iForm.userlist.value.length - 1);
+			}
+            iForm.submit();
+        }
+    }//Save
+</script>

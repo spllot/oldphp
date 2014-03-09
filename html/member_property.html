@@ -1,0 +1,162 @@
+    <center>
+        <form name="join" action="member_save.php" method="post">
+		<input type="hidden" name="mno" value="">
+		<input type="hidden" name="pageno" value="">
+		<input type="hidden" name="keyword" value="">
+		<input type="hidden" name="status" value="">
+		<input type="hidden" name="level" value="">
+		<input type="hidden" name="seller" value="">
+		<input type="hidden" name="sort">
+		<input type="hidden" name="order">
+		<input type="hidden" name="act">
+    <table>
+        <tr>
+            <th style="border-bottom:solid 2px gray">會員資訊</th>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border=0>
+                    <tr>
+                        <td class="html_label">電子郵件：</td>
+                        <td class="html_input" colspan="3"><input type="text" name="userid" value="" size="70" readonly style="background:transparent; border:none"></td>
+					</tr>
+                    <tr style="display:none">
+                        <td class="html_label">密碼：</td>
+                        <td class="html_input"><input type="text" name="userpass" value="" readonly style="background:transparent; border:none"></td>
+					</tr>
+					<tr>
+                        <td class="html_label">會員等級：</td>
+                        <td class="html_input"><input type="text" name="level1" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">總數值：</td>
+                        <td class="html_input"><input type="text" name="days" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+					<tr>
+                        <td class="html_label">真實姓名：</td>
+                        <td class="html_input"><input type="text" name="name" value="" readonly style="background:transparent; border:none"></td>
+					</tr>
+                    <tr>
+                        <td class="html_label">收貨地址：</td>
+                        <td class="html_input" colspan="3"><input type="text" name="address" value="" size="70" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">緯度：</td>
+                        <td class="html_input"><input type="text" name="latitude" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">經度：</td>
+                        <td class="html_input"><input type="text" name="longitude" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">手機：</td>
+                        <td class="html_input"><input type="text" name="phone" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">介紹人手機：</td>
+                        <td class="html_input"><input type="text" name="referral" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">好康資訊：</td>
+                        <td class="html_input"><input type="text" name="subscribe" value="" style="background:transparent; border:none"></td>
+                        <td class="html_label">所在地：</td>
+                        <td class="html_input"><input type="text" name="subscribearea" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">註冊日期：</td>
+                        <td class="html_input"><input class="input_value" type="text" name="dateRegister" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">啟用日期：</td>
+                        <td class="html_input"><input class="input_value" type="text" name="dateConfirm" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+					<tr>
+                        <td class="html_label">最後登入日期：</td>
+                        <td class="html_input"><input class="input_value" type="text" name="dateLogin" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">最後登入IP：</td>
+                        <td class="html_input"><input class="input_value" type="text" name="ipLogin" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th style="border-bottom:solid 2px gray">賣家資訊</th>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border=0>
+                    <tr>
+                        <td class="html_label">發票買受人：</td>
+                        <td class="html_input"><input type="text" name="rname" value="" style="background:transparent; border:none"></td>
+                        <td class="html_label">統一編號：</td>
+                        <td class="html_input"><input type="text" name="unino" value="" style="background:transparent; border:none"></td>
+					</tr>
+                    <tr>
+                        <td class="html_label">郵遞區號：</td>
+                        <td class="html_input"><input type="text" name="rzip" value="" style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">發票地址：</td>
+                        <td class="html_input" colspan="3"><input type="text" name="raddress" value="" size="70" style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">緯度：</td>
+                        <td class="html_input"><input type="text" name="rlatitude" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">經度：</td>
+                        <td class="html_input"><input type="text" name="rlongitude" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">銀行名稱：</td>
+                        <td class="html_input" colspan="3"><input type="text" name="bank" value="" style="background:transparent; border:none"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">分支行名稱：</td>
+                        <td class="html_input"><input type="text" name="branch" value="" style="background:transparent; border:none"></td>
+                        <td class="html_label">用戶帳號：</td>
+                        <td class="html_input"><input type="text" name="account" value="" style="background:transparent; border:none"></td>
+                    </tr>
+					<tr>
+                        <td class="html_label">申請日期：</td>
+                        <td class="html_input"><input class="input_value" type="text" name="dateRequest" value="" readonly style="background:transparent; border:none"></td>
+                        <td class="html_label">審核日期：</td>
+                        <td class="html_input"><input class="input_value" type="text" name="dateApprove" value="" readonly style="background:transparent; border:none"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"><hr>
+				<input name="btnCancel" type="reset" value="上一頁" onClick="goBack();">&nbsp;&nbsp;
+				<input name="btnActive" type="button" value="啟用帳號" onClick="Active();">&nbsp;&nbsp;
+				<input name="btnDActive" type="button" value="停用帳號" onClick="DActive();">&nbsp;&nbsp;
+				<input name="btnApprove" type="button" value="審核成為賣家" onClick="Approve();">&nbsp;&nbsp;
+				<input name="btnDApprove" type="button" value="取消賣家資格" onClick="DApprove();">
+            </td>
+        </tr>
+    </table>
+        </form>
+    <center>
+<script language="javascript">
+	function goBack(){
+		window.location.href = "member.php?pageno=" + join.pageno.value + "&keyword=" + join.keyword.value + "&sort=" + join.sort.value + "&order=" + join.order.value + "&status=" + join.status.value + "&level=" + join.level.value + "&seller=" + join.seller.value ;
+	}
+	function Active(){
+		if(confirm("確定要啟用帳號?")){
+			join.act.value = "1";
+			join.submit();
+		}
+	}
+	function DActive(){
+		if(confirm("確定要停用帳號?")){
+			join.act.value = "2";
+			join.submit();
+		}
+	}
+	function Approve(){
+		if(confirm("確定要審核成為賣家?")){
+			join.act.value = "3";
+			join.submit();
+			
+		}
+	}
+	function DApprove(){
+		if(confirm("確定要取消賣家資格?")){
+			join.act.value = "4";
+			join.submit();
+			
+		}
+	}
+
+</script>

@@ -1,0 +1,80 @@
+
+body{
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    margin-right: 0pt;
+    margin-left: 0pt;
+    margin: 0pt;
+	background-color:#EEEEFF;
+}
+
+.command{
+	width:50pt;
+}
+
+.footer{
+	vertical-align: bottom;
+	text-align: center;
+	font-size:11pt;
+	color:gray;
+}
+
+.footer_bg{
+	background-image: url('../images/index_bottom.jpg');
+	width: 800;
+	height: 124;
+}
+
+.content_bg{
+	background-image: url('../images/index_main.jpg');
+	width: 800;
+	height: 212;
+}
+
+.banner_bg{
+	background-image: url('../images/index_top.jpg');
+	width: 800;
+	height: 109;
+	text-align: right;
+	vertical-align: top;
+}
+
+.main{
+	width: 800;
+	height: 445;
+	border-style: solid ;
+	border-width: 1px;
+	border-color: gray;
+	border-collapse: collapse;
+}
+
+.login{
+	border: 0pt;
+	border-style: solid ;
+	border-width: 1px;
+	border-color:"#3366CC";
+	z-index:1;
+	position: relative;
+}
+
+.label{
+	color: blue;
+    font-size: 11pt;
+    text-align: right;
+}
+
+.leftblock{
+    width: 50%;
+    text-align: center;
+}
+
+.rightblock{
+    width: 50%;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.filter{
+	background-color: yellow;
+    filter: Alpha(Opacity=30);
+}

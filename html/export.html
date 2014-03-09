@@ -1,0 +1,197 @@
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="background:#6699cc; color:white; padding-left:5px; line-height:30px">註冊會員匯出</td>
+	</tr>
+	<tr>
+		<td style="border: solid 1px #6699cc; vertical-align:top">
+			<table width="625">
+				<form name="iForm" method="post" action="">
+				<input type="hidden" name="itemlist">
+				
+				<tr>
+					<td class="html_label_required">資料篩選：</td><Td>
+						<input type="radio" name="to" value="1" checked>全部會員
+						<input type="radio" name="to" value="2">買家會員
+						<input type="radio" name="to" value="3">賣家會員
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td class="html_label">資料篩選：</td>
+					<td>
+						<select name='status'><option value=''>狀態</option><option value='0'>停用</option><option value='1'>啟用</option></select>
+						<select name='level'><option value=''>等級</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option></select>
+						<select name='seller'><option value=''>賣家</option><option value='0'>未申請</option><option value='1'>審核中</option><option value='2'>已審核</option><option value='3'>已取消</option></select>
+
+					</td>
+				</tr>
+				<tr>
+					<td class="html_label_required">匯出欄位：</td>
+					<td>
+						<table>
+							<tr>
+								<td><input type="checkbox" name="items" value="userID" checked>E-mail</td>
+								<td><input type="checkbox" name="items" value="Name">姓名</td>
+								<td><input type="checkbox" name="items" value="Phone">手機</td>
+								<td><input type="checkbox" name="items" value="Address">收貨地址</td>
+								<td><input type="checkbox" name="items" value="Referral">介紹人手機</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="items" value="rName">發票買受人</td>
+								<td><input type="checkbox" name="items" value="uniNo">統一編號</td>
+								<td><input type="checkbox" name="items" value="Bank">銀行名稱</td>
+								<td><input type="checkbox" name="items" value="Branch">分支行名稱</td>
+								<td><input type="checkbox" name="items" value="Account">用戶帳號</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="html_label">匯出格式：</td>
+					<td>
+						<input type="checkbox" name="email" value="1">通訊錄名單
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td class="html_label">匯出格式：</td>
+					<td>
+						<input type="radio" name="format" value="txt" checked>純文字
+						<input type="radio" name="format" value="xls">MS-Excel
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<hr style="height: 1px; color: gray">
+						<table width="100%">
+							<tr>
+								<td align="center" width="100%"><input name="btnImport" type="button" value="匯出" onClick="Export();"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</form>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="background:#6699cc; color:white; padding-left:5px; line-height:30px">好康&電子報會員匯出</td>
+	</tr>
+	<tr>
+		<td style="border: solid 1px #6699cc; vertical-align:top">
+			<table width="625">
+				<form name="jForm" method="post" action="">
+				<input type="hidden" name="itemlist">
+				
+				<tr>
+					<td class="html_label_required">資料篩選：</td><Td>
+						<input type="radio" name="to" value="1" checked>全部會員
+						<input type="radio" name="to" value="4">好康資訊會員
+						<input type="radio" name="to" value="5">電子報會員
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td class="html_label">資料篩選：</td>
+					<td>
+						<select name='status'><option value=''>狀態</option><option value='0'>停用</option><option value='1'>啟用</option></select>
+						<select name='level'><option value=''>等級</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option></select>
+						<select name='seller'><option value=''>賣家</option><option value='0'>未申請</option><option value='1'>審核中</option><option value='2'>已審核</option><option value='3'>已取消</option></select>
+
+					</td>
+				</tr>
+				<tr>
+					<td class="html_label_required">匯出欄位：</td>
+					<td>
+						<table>
+							<tr>
+								<td><input type="checkbox" name="items" value="userID" checked>E-mail</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Name">姓名</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Phone">手機</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Address">收貨地址</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Referral">介紹人手機</td>
+							</tr>
+							<tr>
+								<td style="display:none"><input type="checkbox" name="items" value="rName">發票買受人</td>
+								<td style="display:none"><input type="checkbox" name="items" value="uniNo">統一編號</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Bank">銀行名稱</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Branch">分支行名稱</td>
+								<td style="display:none"><input type="checkbox" name="items" value="Account">用戶帳號</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="html_label">匯出格式：</td>
+					<td>
+						<input type="checkbox" name="email" value="1">通訊錄名單
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td class="html_label">匯出格式：</td>
+					<td>
+						<input type="radio" name="format" value="txt" checked>純文字
+						<input type="radio" name="format" value="xls">MS-Excel
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<hr style="height: 1px; color: gray">
+						<table width="100%">
+							<tr>
+								<td align="center" width="100%"><input name="btnImport" type="button" value="匯出" onClick="Export2();"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</form>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+
+
+<iframe name="iAction" width="100%" height="100" style="display:none"></iframe>
+<script language="javascript">
+function Export(){
+	var tstr = "";
+	for(var i=0; i<iForm.items.length; i++){
+		if(iForm.items[i].checked){
+			tstr += iForm.items[i].value + ",";
+		}
+	}
+	if(tstr.length> 0){
+		tstr = tstr.substring(0, tstr.length-1);
+		iForm.itemlist.value=tstr;
+		iForm.action = "export_save.php";
+		iForm.target = "iAction";
+		iForm.submit();
+	}
+	else{
+		alert("請至少勾選一個欄位!");
+	}
+}
+function Export2(){
+	var tstr = "";
+	for(var i=0; i<jForm.items.length; i++){
+		if(jForm.items[i].checked){
+			tstr += jForm.items[i].value + ",";
+		}
+	}
+	if(tstr.length> 0){
+		tstr = tstr.substring(0, tstr.length-1);
+		jForm.itemlist.value=tstr;
+		jForm.action = "export2_save.php";
+		jForm.target = "iAction";
+		jForm.submit();
+	}
+	else{
+		alert("請至少勾選一個欄位!");
+	}
+}
+
+</script>

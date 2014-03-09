@@ -1,0 +1,67 @@
+    <table cellpadding="0" cellspacing="0" border="0">
+        <form name="iForm" action="catalog_save.php" method="post">
+        <input type="hidden" name="no" value="">
+		<input type="hidden" name="pageno">
+		<input type="hidden" name="parent">
+		<input type="hidden" name="cat1">
+		<input type="hidden" name="cat2">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td class="html_label_required">類別：</td>
+                        <td align="left">
+							<select name="usefor"></select>
+							<input type="text" name="cat1_name" style="width:120px; border: 0 0 1 0; background:transparent">
+							<input type="text" name="cat2_name" style="width:120px; border: 0 0 1 0; background:transparent">
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required">分類名稱：</td>
+                        <td align="left"><input type="text" name="name" value="" style="width:250px"></td>
+                    </tr>
+                    <tr>
+                      <td class="html_label_required">排列順序：</td>
+                        <td align="left"><input type="text" name="sort" value="" style="width:50px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><hr>
+                <table width="100%">
+                    <tr>
+                        <td align="center" width="50%"><input type="button" value="確定" onClick="Save();"></td>
+                        <td align="center" width="50%"><input type="reset" value="取消" onclick="Cancel();"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </form>
+    </table>
+<script language="javascript">
+    function Cancel(){
+		iForm.action="catalog.php";
+		iForm.submit();
+    }//Save
+    function Save(){
+        if (!iForm.name.value){
+            alert("請輸入分類名稱!");
+            iForm.name.focus();
+        }
+		else if(!iForm.sort.value){
+			alert("請輸入排列順序!");
+			iForm.sort.focus();
+		}
+        else{
+			iForm.parent.value = '';
+			if(iForm.cat1.value){
+				iForm.parent.value = iForm.cat1.value;
+			}
+			if(iForm.cat2.value){
+				iForm.parent.value = iForm.cat2.value;
+			}
+            iForm.submit();
+        }
+    }//Save
+</script>

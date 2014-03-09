@@ -1,0 +1,105 @@
+    <table cellpadding="0" cellspacing="0" border="0">
+        <form name="iForm" action="user_save.php" method="post">
+        <input type="hidden" name="no" value="">
+        <input type="hidden" name="group" value="">
+		<input type="hidden" name="pageno">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td class="html_label_required">帳號：</td>
+                        <td align="left"><input type="text" name="userid" value="" style="width:150px"></td>
+                        <td class="html_label_required">姓名：</td>
+                        <td align="left"><input type="text" name="username" value="" style="width:150px"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">密碼：</td>
+                        <td align="left"><input type="password" name="userpass" value="" style="width:150px"></td>
+                        <td class="html_label">確認密碼：</td>
+                        <td align="left"><input type="password" name="userpass1" value="" style="width:150px"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label">EMail：</td>
+                        <td align="left" colspan="3"><input type="text" name="email" value="" style="width:350px"></td>
+                    </tr>
+                    <tr>
+                        <td  class="html_label">群組：</td>
+                        <td align="left" colspan="3">
+                            <iframe name="iAction" style="width:350px" height="160"></iframe>
+                        </td>
+                    </tr>
+                     <tr style="display:none">
+                        <td class="html_label">登入日期：</td>
+                        <td align="left" colspan="3"><input type="text" name="datelastlogin" value="" style="width:350px; background-color:transparent; border-width: 0 0 0 0; color:gray"></td>
+                    </tr>
+                    <tr style="display:none">
+                        <td class="html_label">登入IP：</td>
+                        <td align="left" colspan="3"><input type="text" name="iplastlogin" value="" style="width:350px; background-color:transparent; border-width: 0 0 0 0; color:gray"></td>
+                    </tr>
+                   <tr style="display:none">
+                        <td></td>
+                        <td height="25" align="left"><a href="#" onClick="checkAll(true);"><font size=-1 color=blue>全選</font></a> / <a href="#" onClick="checkAll(false);"><font size=-1 color=red>取消全選</font></a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><hr>
+                <table width="100%">
+                    <tr>
+                        <td align="center" width="50%"><input type="button" value="確定" onClick="Save();"></td>
+                        <td align="center" width="50%"><input type="reset" value="取消" onclick="history.back();"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </form>
+    </table>
+<script language="javascript">
+    function checkAll(x){
+        var Modules = iAction.lForm.modulelist.value.split(",");
+        for (var j=0; j<Modules.length; j++){
+            if (Modules[j]){
+                xObject = eval("iAction.lForm." + Modules[j]);
+                if (xObject && xObject.length){
+                    for (var i=0; i<xObject.length; i++){
+                        xObject[i].checked = x;
+                    }//for
+                }//if
+            }//if
+        }//for
+    }//checkAll
+
+    function Save(){
+        if(!iForm.userid.value){
+            alert("請設定登入帳號!!");
+            iForm.userid.focus();
+        }
+        else if (!iForm.username.value){
+            alert("請輸入姓名!!");
+            iForm.username.focus();
+        }
+        else if (!iForm.no.value && !iForm.userpass.value){
+            alert("新增管理員必須設定密碼!!");
+            iForm.userpass.focus();
+        }
+        else if (iForm.userpass.value != iForm.userpass1.value){
+            alert("密碼不符!!");
+            iForm.userpass.focus();
+        }
+        else{
+            var tStr = "";
+            var xObject = eval("iAction.lForm.gp");
+            if (xObject && xObject.length){
+                for (var i=0; i<xObject.length; i++){
+                    if (xObject[i].value && xObject[i].checked){
+                        tStr += xObject[i].value + ",";
+                    }//if
+                }//for
+            }//if
+			if(tStr.length > 0){tStr = tStr.substring(0, tStr.length - 1);}
+            iForm.group.value = tStr;
+            iForm.submit();
+        }
+    }//Save
+</script>

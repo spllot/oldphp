@@ -1,0 +1,457 @@
+    <table cellpadding="0" cellspacing="0" border="0">
+        <form name="iForm" action="setting_save.php" method="post">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網站 Logo：</td>
+                        <td align="left" style="font-size:11pt">
+							<div style="float:left"><input type="image" id="upload0" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(329x96)</div>
+							<div style="font-size:10pt; display:none" id="loading0">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="logo" id="logo" value="" />
+							<div id="cbox0"><img name="pic0" src="/images/none.png" title="圖片" style="width:329; height:96px"></div>		
+							圖片來源連結：<input type="text" name="imgurl0" style="width:360px">							
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload0', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading0").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'LOGO_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 329,
+					'height': 96
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#logo').val(response);
+			$('#cbox0').html("<img src='/upload/"+response+"' style='width:329; height:96px'>");
+			document.getElementById("loading0").style.display="none";
+		}
+	});
+});
+</script>
+
+
+
+
+
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網站 Banner：</td>
+                        <td align="left" style="font-size:11pt">
+							<select name="showimg1">
+								<option value="Y">顯示</option>
+								<option value="N">不顯示</option>
+							</select><br>
+							<div style="float:left"><input type="image" id="upload1" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(590x96)</div>
+							<div style="font-size:10pt; display:none" id="loading1">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath1" id="ad_picpath1" value="" />
+							<div id="cbox1"><img name="pic1" src="/images/none.png" title="圖片" style="width:590; height:96px"></div>			
+							圖片來源連結：<input type="text" name="imgurl1" style="width:360px"><br>
+							連結：<input type="text" name="link1" style="width:360px">
+
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload1', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading1").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'BANNER1_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 590,
+					'height': 96
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath1').val(response);
+			$('#cbox1').html("<img src='/upload/"+response+"' style='width:590; height:96px'>");
+			document.getElementById("loading1").style.display="none";
+		}
+	});
+});
+</script>
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">好康訊息 Banner：</td>
+                        <td align="left" style="font-size:11pt">
+							<div style="float:left"><input type="image" id="upload2" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(590x96)</div>
+							<div style="font-size:10pt; display:none" id="loading2">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath2" id="ad_picpath2" value="" />
+							<div id="cbox2"><img name="pic2" src="/images/none.png" title="圖片" style="width:590; height:96px"></div>			
+							圖片來源連結：<input type="text" name="imgurl2" style="width:360px"><br>
+							連結：<input type="text" name="link2" style="width:360px">		
+
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload2', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading2").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'BANNER2_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 590,
+					'height': 96
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath2').val(response);
+			$('#cbox2').html("<img src='/upload/"+response+"' style='width:590; height:96px'>");
+			document.getElementById("loading2").style.display="none";
+		}
+	});
+});
+</script>							
+
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">即送網廣告1：</td>
+                        <td align="left" style="font-size:11pt">
+							<div style="float:left"><input type="image" id="upload3" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(202x57)</div>
+							<div style="font-size:10pt; display:none" id="loading3">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath3" id="ad_picpath3" value="" />
+							<div id="cbox3"><img name="pic3" src="/images/none.png" title="圖片" style="width:202; height:57px"></div>			
+							圖片來源連結：<input type="text" name="imgurl3" style="width:360px"><br>
+							連結：<input type="text" name="link3" style="width:360px">			
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload3', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading3").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'BANNER3_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 400,
+					'height': 60
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath3').val(response);
+			$('#cbox3').html("<img src='/upload/"+response+"' style='width:202; height:57px'>");
+			document.getElementById("loading3").style.display="none";
+		}
+	});
+});
+</script>							
+
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">即送網廣告2：</td>
+                        <td align="left" style="font-size:11pt">
+							<div style="float:left"><input type="image" id="upload8" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(202x57)</div>
+							<div style="font-size:10pt; display:none" id="loading8">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath8" id="ad_picpath8" value="" />
+							<div id="cbox8"><img name="pic8" src="/images/none.png" title="圖片" style="width:202; height:57px"></div>			
+							圖片來源連結：<input type="text" name="imgurl8" style="width:360px"><br>							
+							連結：<input type="text" name="link8" style="width:360px">			
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload8', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading8").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'BANNER8_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 400,
+					'height': 60
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath8').val(response);
+			$('#cbox8').html("<img src='/upload/"+response+"' style='width:202; height:57px'>");
+			document.getElementById("loading8").style.display="none";
+		}
+	});
+});
+</script>							
+
+
+						</td>
+                    </tr>
+					<tr>
+                        <td class="html_label_required" style="width:180px">賣家電子商務服務條款(電子檔)：</td>
+                        <td align="left" style="font-size:11pt">
+							<div style="float:left"><input type="image" id="upload4" src="../images/icon_upld.png" /></div>
+							<div style="font-size:10pt; display:none" id="loading4">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="text" name="seller_policy" id="seller_policy" value="" style="border:none; background:transparent"/>
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload4', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(pdf|PDF|Pdf)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading4").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'pdf_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 400,
+					'height': 60
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 PDF');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#seller_policy').val(response);
+			$('#cbox4').html(response);
+			document.getElementById("loading4").style.display="none";
+		}
+	});
+});
+</script>
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">顯示首頁訊息：</td>
+                        <td align="left" width="300">
+							<select name="welcome">
+								<option value="Y">啟用</option>
+								<option value="N">不啟用</option>
+							</select>
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">金流商品建置：</td>
+                        <td align="left" width="300">
+							<select name="cashflow">
+								<option value="Y">啟用</option>
+								<option value="N">不啟用</option>
+							</select>
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">優惠憑證扣點：</td>
+                        <td align="left">
+							<input type="text" name="coupon" value="" style="width:50px"><br><font style="color:red;">(每發一筆"優惠憑證送出"，扣除商家儲值點數)</font>
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">金流商品圖片限制：</td>
+                        <td align="left">
+							<input type="text" name="pics1" value="" style="width:50px"><br><font style="color:red;">(0為不開放上傳)</font>
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">非金流商品圖片限制：</td>
+                        <td align="left">
+							<input type="text" name="pics2" value="" style="width:50px"><br><font style="color:red;">(0為不開放上傳)</font>
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">儲值金匯出等級限制：</td>
+                        <td align="left">
+							<input type="text" name="exp" value="" style="width:50px"><br><font style="color:red;">(大於設定等級才能申請值金匯出)</font>
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">商品介紹捲動速度：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="scroll"><br><font style="color:red;">(愈小愈快，建議設定差值10，0為靜止)</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">右側廣告設定：</td>
+                        <td align="left" style="font-size:11pt">向上跑馬速度：<input type="text" style="width:50px" name="ad"><br><font style="color:red;">(愈小愈快，建議設定差值10，0為靜止)</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">下方廣告設定：</td>
+                        <td align="left" style="font-size:11pt">向左跑馬速度：<input type="text" style="width:50px" name="ad2"><br><font style="color:red;">(愈小愈快，建議設定差值10，0為靜止)</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">自動下廣告數目：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="ad2_auto"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">平信郵寄費：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="fee1"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">掛號郵寄費：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="fee2"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">臨櫃匯款費：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="fee3"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">前台右側廣告上限：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="admax1"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">前台右側廣告日價：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="adfee1"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">前台下方分類廣告日價：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:50px" name="adfee2"><br><font style="color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址A：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlA"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址B：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlB"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址C：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlC"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址D：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlD"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址E：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlE"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址F：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlF"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址G：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlG"></td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">網址H：</td>
+                        <td align="left" style="font-size:11pt"><input type="text" style="width:500px" name="urlH"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><hr>
+                <table width="100%">
+                    <tr>
+                        <td align="center" width="100%"><input type="button" value="確定" onClick="Save();"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </form>
+    </table>
+<script language="javascript">
+    function Save(){
+        iForm.submit();
+    }//Save
+</script>
+
+
+
+

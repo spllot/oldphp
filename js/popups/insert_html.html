@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html STYLE="width: 640px; height: 500px; ">
+ <HEAD>
+  <TITLE>插入HTML</TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+ <form name="iForm">
+  <div id="watch-customize-embed">
+		<textarea name="url" style="width:600px; height:200px" onKeyUp="setPreview();"></textarea>
+		<div id="preview" style="width:600px; height:200px; overflow:hidden"></div>
+  </div>
+		
+		<hr>
+<center>		
+	<input type="button" value="取消" onClick="btnCancel();">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" value="確定" onClick="btnOK();">
+</form>
+</center>
+	 </BODY>
+</HTML>
+<script language="javascript">
+
+	function setPreview(){
+		document.getElementById("preview").innerHTML = document.iForm.url.value;
+	}
+
+	function btnCancel(){
+		window.close();
+	}
+
+	function btnOK(){
+		if(!document.iForm.url.value){
+			alert("請輸入HTML");
+		}
+		else{
+			window.returnValue = document.iForm.url.value;
+			window.close();
+		}
+	}
+</script>

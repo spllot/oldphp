@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+		ffont-family: 'MingLiu', 'Heiti TC', sans-serif;
+		font-size:14px;
+		margin:0;
+		padding:0;
+		background-color:#e8fcdf;
+		height:100%;
+}
+
+html{
+	height:100%;
+}
+
+div, p, ul, li, h1, h2{
+	margin:0;
+	padding:0;
+}
+
+ul, li{
+	list-style:none;
+}
+
+img{
+	border:0;
+}
+
+a{
+	text-decoration:none;
+}
+
+/*------------------header----------------------*/
+header{
+	background:-webkit-Linear-gradient(#78ba67 0%, #83be64 10%, #7fbd5a 50%, #469f10 55%, #319206 90%, #2a8e0a 100%);
+	background:-moz-Linear-gradient(#78ba67 0%, #83be64 10%, #7fbd5a 50%, #469f10 55%, #319206 90%, #2a8e0a 100%);
+	background:-ms-Linear-gradient(#78ba67 0%, #83be64 10%, #7fbd5a 50%, #469f10 55%, #319206 90%, #2a8e0a 100%);
+	background:-o-Linear-gradient(#78ba67 0%, #83be64 10%, #7fbd5a 50%, #469f10 55%, #319206 90%, #2a8e0a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#78ba67), color-stop(10%, #83be64), color-stop(50%, #7fbd5a),  color-stop(55%, #469f10),  color-stop(90%, #319206),to(#2a8e0a)); 
+    box-shadow: 0 0 5px  rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0 0 5px  rgba(255,255,255,0.5) inset;
+	text-align:center;
+	display:block;
+}
+
+header h1 img{
+	padding:10px 0 0;
+	width:60%;
+	height:auto;
+}
+
+
+/*------------------main---------------------*/
+#main img{
+	width:100%;
+	height:auto;
+}
+
+
+/*----------------global_navi-----------------*/
+#global_navi{
+width:98%;
+margin:1% auto 0;
+}
+
+#global_navi li.dp span{
+	background:-webkit-Linear-gradient(#58b62f 0%, #2a7f0e 50%, #27780d 52%,  #1b6904 100%);
+	background:-ms-Linear-gradient(#58b62f 0%, #2a7f0e 50%, #27780d 52%,  #1b6904 100%);
+	background:-moz-Linear-gradient(#58b62f 0%, #2a7f0e 50%, #27780d 52%,  #1b6904 100%);
+	background:-o-Linear-gradient(#58b62f 0%, #2a7f0e 50%, #27780d 52%,  #1b6904 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#58b62f), color-stop(50%, #2a7f0e), color-stop(52%, #27780d), to(#1b6904));
+	color:#FFFFFF;
+	font-size:30px;
+	padding:12px 10px 0px;
+	border-radius:5px;
+	margin-bottom:3%;
+	box-shadow:0px 2px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0px 2px 3px rgba(0,0,0,0.5);
+	clear:both;
+	display:block;
+}
+
+#global_navi li.dp span{
+	display:block;
+}
+
+#global_navi li.dp span a{
+	display:block;
+	color:#FFFFFF;
+	font-family:"微軟正黑體";
+	font-size:50px;
+	display:block;
+	padding:0 0 0% 1% !important;
+}
+
+#global_navi li.dp span a img{
+	width:110px;
+	vertical-align: middle;
+	padding:0 ;
+	margin:0 1% 1% 0 ;
+}
+
+
+#global_navi li.dp img{
+	width:40%;
+}
+
+#global_navi li.dp ul {
+    padding:6px 10px 5px 5px;
+	background:-webkit-Linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(237,251,202,1)100%);
+	background:-moz-Linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(237,251,202,1)100%);
+	background:-ms-Linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(237,251,202,1)100%);
+	background:-o-Linear-gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(237,251,202,1)100%);
+	border-right:1px solid #c9c9c9;
+	border-bottom:1px solid #c9c9c9;
+	border-left:1px solid #c9c9c9;
+	margin:-12px 0 10px;
+	box-shadow:0 0 3px rgba(255,255,255,1) inset;
+	-webkit-box-shadow:0 0 3px rgba(255,255,255,1) inset;
+}
+#global_navi li.dp ul li {
+	float:left;
+	width:31%;
+	margin:1% 0 1% 2%;
+}
+
+#global_navi li.dp ul li img{
+	width:100%;
+}
+
+
+
+
+/*-----------------icon-------------------*/
+.icon{
+	background:url(../images/menu-icon.png) no-repeat 97% 35% ;
+	background-size:6%;
+}
+
+
+
+/*---------------section-------------------*/
+section{
+	text-align:center;
+	width:100%;
+	margin:0 auto ;
+}
+
+section img{
+	width:100%;
+	margin-bottom:15%;
+}
+
+
+
+
+.clearfix:after{
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+
+
+
+
+	/*---------------login-------------------*/
+#login{
+	width:100%;
+	bottom:0;
+	position:fixed;
+}
+
+
+
+#login li{
+	float:left;
+	width:50%;
+	text-align:center;
+	background:-webkit-linear-gradient(#78ce47 0%,#63ad2c 50%,  #4ba109 51%, #156100 100% );
+	background:-webkit-moz-gradient(#78ce47 0%,#63ad2c 50%,  #4ba109 51%, #156100 100% );
+	background:-webkit-ms-gradient(#78ce47 0%,#63ad2c 50%,  #4ba109 51%, #156100 100% );
+	background:-webkit-o-gradient(#78ce47 0%,#63ad2c 50%,  #4ba109 51%, #156100 100% );
+	background: -webkit-gradient(linear, left top, left bottom, from(#78ce47), color-stop(50%, #63ad2c), color-stop(51%, #4ba109), to(#156100));
+	border-top:1px solid #035a1b;
+	box-shadow:0 0 5px rgba(255,255,255,0.5) inset;
+	display:block;
+	font-size:55px;
+}
+
+#login li a{
+	color:#FFFFFF;
+    font-family:"微軟正黑體";
+	padding:5% 0;
+	display:block;
+	text-shadow:2px 2px 1px rgba(0,0,0,0.5);
+}
+
+#login li:first-of-type a {
+	background: url(../images/com-line.gif) right top  repeat-y;
+	
+	
+}
+
+#login li img{
+	width:80%;
+	padding:10% 0;
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width:899px) {
+	
+#login li{
+	font-size:38px;
+}
+
+#global_navi li.dp span{
+	display:block;
+}
+
+#global_navi li.dp span a{
+	font-size:38px;
+}
+
+#global_navi li.dp span a img{
+	width:70px;
+}
+
+	
+}
+
+
+@media only screen and (max-width:599px) {
+	
+#login li{
+	font-size:18px;
+}
+
+#login li a{
+	padding:6% 0;
+}
+
+#global_navi li.dp span a{
+	font-size:20px;
+	padding:0 0 1% 0;
+}
+
+#global_navi li.dp span a img{
+	width:45px;
+}
+
+
+}
+
+

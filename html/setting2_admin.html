@@ -1,0 +1,201 @@
+    <table cellpadding="0" cellspacing="0" border="0">
+        <form name="iForm" action="setting2_save.php" method="post">
+        <tr>
+            <td>
+                <table>
+
+                    <tr>
+                        <td class="html_label_required" style="width:180px">商品交易記錄說明：</td>
+                        <td align="left" style="font-size:11pt">
+							<select name="showimg5">
+								<option value="Y">顯示</option>
+								<option value="N">不顯示</option>
+							</select><br>
+
+							<div style="float:left"><input type="image" id="upload5" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(寬：700)</div>
+							<div style="font-size:10pt; display:none" id="loading5">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath5" id="ad_picpath5" value="" />
+							<div id="cbox5"><img name="pic5" src="/images/none.png" title="圖片" style="width:700;"></div>					
+							圖片來源連結：<input type="text" name="imgurl5" style="width:600px">
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload5', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading5").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'img5_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 700,
+					'height': 60
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath5').val(response);
+			$('#cbox5').html("<img src='/upload/"+response+"' style='width:700;'>");
+			document.getElementById("loading5").style.display="none";
+		}
+	});
+});
+</script>
+
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">商家處理資訊說明：</td>
+                        <td align="left" style="font-size:11pt">
+							<select name="showimg6">
+								<option value="Y">顯示</option>
+								<option value="N">不顯示</option>
+							</select><br>
+
+							<div style="float:left"><input type="image" id="upload6" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(寬：700)</div>
+							<div style="font-size:10pt; display:none" id="loading6">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath6" id="ad_picpath6" value="" />
+							<div id="cbox6"><img name="pic6" src="/images/none.png" title="圖片" style="width:700"></div>					
+							圖片來源連結：<input type="text" name="imgurl6" style="width:600px">
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload6', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading6").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'img6_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 400,
+					'height': 60
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath6').val(response);
+			$('#cbox6').html("<img src='/upload/"+response+"' style='width:700;'>");
+			document.getElementById("loading6").style.display="none";
+		}
+	});
+});
+</script>
+
+
+
+						</td>
+                    </tr>
+                    <tr>
+                        <td class="html_label_required" style="width:180px">匯款帳務查詢說明：</td>
+                        <td align="left" style="font-size:11pt">
+							<select name="showimg7">
+								<option value="Y">顯示</option>
+								<option value="N">不顯示</option>
+							</select><br>
+
+							<div style="float:left"><input type="image" id="upload7" src="../images/icon_upld.png" /></div>
+							<div style="float:left">(寬：700)</div>
+							<div style="font-size:10pt; display:none" id="loading7">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><img src="../images/loader_light_blue.gif"></td>
+										<td style='font-size:10pt'>&nbsp;上傳中，請待候…</td>
+									</tr>
+								</table>
+							</div><br>
+							<input type="hidden" name="ad_picpath7" id="ad_picpath7" value="" />
+							<div id="cbox7"><img name="pic7" src="/images/none.png" title="圖片" style="width:700"></div>					
+							圖片來源連結：<input type="text" name="imgurl7" style="width:600px">
+<script language="javascript">
+$(function() {
+	new AjaxUpload('#upload7', {
+		action: 'uploadfile.php',
+		onSubmit : function(file , ext){
+			if (ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext)){
+				var d = new Date();
+				var curr_hour = d.getHours();
+				var curr_min = d.getMinutes();
+				var curr_sec = d.getSeconds();
+				document.getElementById("loading7").style.display="block";
+				this.setData({
+					'dir':  	"../upload/",
+					"fname": 	'img7_'+d.getTime()+"."+ext,
+					'ext':  	ext,
+					'width': 400,
+					'height': 60
+				});
+			} else {					
+				alert('上傳錯誤訊息: 只允許上傳 image 圖檔 (jpg,png,jpeg,gif)');
+				return false;				
+			}		
+		},
+		onComplete : function(file, response){
+			$('#ad_picpath7').val(response);
+			$('#cbox7').html("<img src='/upload/"+response+"' style='width:700;'>");
+			document.getElementById("loading7").style.display="none";
+		}
+	});
+});
+</script>
+
+
+
+						</td>
+                    </tr>						
+					
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><hr>
+                <table width="100%">
+                    <tr>
+                        <td align="center" width="100%"><input type="button" value="確定" onClick="Save();"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </form>
+    </table>
+<script language="javascript">
+    function Save(){
+        iForm.submit();
+    }//Save
+</script>
+
+
+
+
